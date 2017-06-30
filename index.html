@@ -1,15 +1,27 @@
 <html>
   <head>
     <title>Albort-z Home Page</title>
-    <script type="text/javascript">
-      
-    </script>
+
   </head>
   <body>
     <p>
-最新hosts文件下载：
-<a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" download="hosts">hosts</a>
-本文件引用https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts
+      <div class="download">
+        <p id="tip">最新hosts文件下载：
+        </p>
+        <a href="https://coding.net/u/scaffrey/p/hosts/git/raw/master/hosts" download="hosts">hosts</a>
+        <p>本文件引用https://coding.net/u/scaffrey/p/hosts/git/blob/master/hosts</p>
+      </div>
     </p>
+      
+    <script type="text/javascript">
+      var isSupportDownload = 'download' in document.createElement('a');
+      if (isSupportDownload) {
+        var dows = document.getElementsByClassName("download");
+        var i;
+        for (i = 0; i < dows.length; i++) {
+          dows[i].children[0].append("浏器不支持download属性，请右击另存为");
+        }
+      }
+    </script>
   </body>
 </html>
