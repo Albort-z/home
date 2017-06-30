@@ -15,7 +15,7 @@
       
     <script type="text/javascript">
       var isSupportDownload = 'download' in document.createElement('a');
-      if (isSupportDownload) {
+      if (!isSupportDownload) {
         var dows = document.getElementsByClassName("download");
         var i;
         for (i = 0; i < dows.length; i++) {
